@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Promotion</title>
+</head>
+<body>
+    <h1>{{.Nom}} - {{.Filiere}} - {{.Niveau}}</h1>
+    <p>Nombre d'étudiants : {{.NbEtudiants}}</p>
+    <ul>
+        {{range .Etudiants}}
+            <li>
+                {{.Prenom}} {{.Nom}}, {{.Age}} ans
+                <img class="sex-icon" src="/static/images/{{if eq .Sexe "masculin"}}masculin{{else}}feminin{{end}}.png" alt="{{.Sexe}}">
+            </li>
+        {{end}}
+    </ul>
+</body>
+</html>

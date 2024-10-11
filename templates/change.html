@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Change</title>
+</head>
+<body class="{{if .IsPair}}pair{{else}}impair{{end}}">
+    <h1>{{if .IsPair}}Le nombre de vues est pair : {{.Vues}}{{else}}Le nombre de vues est impair : {{.Vues}}{{end}}</h1>
+</body>
+</html>
